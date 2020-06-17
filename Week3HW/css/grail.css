@@ -1,0 +1,64 @@
+#header{
+    width: auto;
+    height: 10vh;
+    text-align: center;
+    background-color: gray;
+    font-size: 2em;
+    line-height: 10vh;
+}
+
+body{
+    background-color: teal;
+}
+
+#page{
+    position: relative;
+}
+
+#sidebar{
+    float: left;
+    width: 20vw;
+    height: 80vh;
+    font-size: 2em;
+    line-height: 80vh;
+    text-align: center;
+    background-color: violet;
+    position: absolute;
+    left: 0px;
+}
+
+#content{
+    float: right;
+    width: 60vw;
+    height: 80vh;
+    font-size: 2em;
+    line-height: 80vh;
+    text-align: center;
+    background-color: yellow;
+    position: absolute;
+    left: 20vw;
+}
+
+#rightbar{
+    float: right;
+    width: 20vw;
+    height: 80vh;
+    font-size: 2em;
+    line-height: 80vh;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    left: 80vw;
+}
+
+#footer{
+    height: 10vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 2em;
+    line-height: 10vh;
+    background-color: tomato;
+    position: absolute;
+    left: 0px;
+    top: 90vh;
+}

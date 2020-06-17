@@ -1,0 +1,60 @@
+#page{
+    text-align: center;
+    background-color: grey;
+    position: relative;
+
+}
+
+#header{
+    height: 5vh;
+    width: 100vw;
+    position: absolute;
+    left: 0px;
+    background-color: inherit;
+    color: black;
+    line-height: 5vh;
+    border-bottom: solid 3px rgb(0, 0, 0);
+}
+
+#col1{
+    max-height: 75vh;
+    width: 20vw;
+    margin: 3vh;
+    padding: 2vh;
+    background-color: aqua;
+    line-height: 20vh;
+    border: solid 2px green;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 4vh; 
+}
+
+#col2{
+    max-height: 60vh;
+    width: 58vw;
+    float: right;
+    max-width: 58vw;
+    margin: 3vh;
+    padding: 2vh;
+    background-color: aqua;
+    line-height: 20vh;
+    border: solid 2px green;
+    overflow: hidden;
+    position: absolute;
+    left: 30vw;
+    top: 4vh;
+}
+
+#footer{
+    height: 5vh;
+    width: 100vw;
+    position: absolute;
+    top: calc(95vh - 3px);
+    left: 0px;
+    background-color: inherit;
+    color: black;
+    line-height: 5vh;
+    border-top: solid 3px rgb(0, 0, 0);
+    overflow: hidden;
+}

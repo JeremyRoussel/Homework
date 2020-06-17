@@ -1,0 +1,40 @@
+#header{
+    width: auto;
+    height: 5vh;
+    text-align: center;
+    background-color: gray;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+body{
+    background-color: teal;
+}
+
+#sidebar{
+    float: left;
+    width: 20vw;
+    height: 90vh;
+    font-size: 1em;
+    line-height: 90vh;
+    text-align: center;
+    background-color: violet;
+}
+
+#content{
+    float: right;
+    width: 80vw;
+    height: 90vh;
+    font-size: 2em;
+    line-height: 90vh;
+    text-align: center;
+    background-color: yellow;
+}
+
+#footer{
+    height: 5vh;
+    width: auto;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
