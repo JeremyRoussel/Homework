@@ -1,0 +1,48 @@
+#header{
+    width: 100vw;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav{
+    justify-content: center;
+    background-color: orchid;
+}
+
+#main{
+    width: 100vw;
+    height: 90vh;
+    line-height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar{
+    width: 35vw;
+    height: inherit;
+    line-height: inherit;
+    background-color: lawngreen;
+}
+
+#content{
+    width: 64vw;
+    height: inherit;
+    line-height: inherit;
+    background-color: lightcoral;
+}
+
+#footer{
+    width: inherit;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: orange;
+}
+
+*{
+    margin: 0px;
+}

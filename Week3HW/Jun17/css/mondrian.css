@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#page{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+
+.flex_column{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.flex1{
+    flex: 1;
+}
+
+.flex2{
+    flex: 2;
+}
+
+.flex3{
+    flex: 3;
+}
+
+.flex4{
+    flex: 4;
+}
+
+.flex8{
+    flex: 8;
+}
+
+.flex9{
+    flex: 9;
+}
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.red{
+    background-color: red;
+}
+
+.black{
+    background-color: black;
+}
+
+.pink{
+    background-color: pink;
+}
+
+.white{
+    background-color: white;
+}
+
+.border{
+    border: solid 2px rgb(58, 58, 58);
+}
+
+.noright{
+    border-right: none;
+}
+
+.noleft{
+    border-left: none;
+}
