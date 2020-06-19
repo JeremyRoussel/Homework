@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .navbar-nav li:not(:last-child){
+            border-right: 2px solid black;
+        }
+
+        .title{
+            display: flex;
+            height: 20vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title-text{
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        .bb{
+            border-bottom: solid 3px black;
+        }
+
+        .content{
+            display: flex;
+            flex-direction: column;
+            height: 30vh;
+            align-items: center;
+            justify-content:space-around; 
+        }
+
+        .content-title{
+            height: auto;
+            font-size: x-large;
+            text-align: center;
+        }
+
+        .content-boxes{
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .boxes{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .picboxes{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .boxtitle{
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .ulboxes{
+            display: flex;
+            flex-direction: column;
+        }
+
+        img{
+            max-width: 20vw;
+            max-height: 20vh;
+        }
+   
+    </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-sm navbar-dark bb" style="background-color: rgb(47, 122, 175);">
+          <a class="navbar-brand" href="#">Our Company</a>
+          <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+              aria-expanded="false" aria-label="Toggle navigation"></button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Products</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Company</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Blog</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      
+      <div class="container title bb">
+        <p class='title-text'>We Are Awesome</p>
+      </div>
+
+      <div class="container content bb">
+          <div class="container content-title">
+              Awesomeness
+          </div>
+          <div class="container content-boxes">
+            <div class="boxes">
+                <p class="boxtitle">Boldness 1</p>
+                <ul class=ulboxes>
+                    <li>Item1</li>
+                    <li>Item2</li>
+                    <li>Item3</li>
+                </ul>
+            </div>
+            <div class="boxes">
+                <p class="boxtitle">Boldness 2</p>
+                <ul class=ulboxes>
+                    <li>Item1</li>
+                    <li>Item2</li>
+                    <li>Item3</li>
+                </ul>
+            </div>
+            <div class="boxes">
+                <p class="boxtitle">Boldness 3</p>
+                <ul class=ulboxes>
+                    <li>Item1</li>
+                    <li>Item2</li>
+                    <li>Item3</li>
+                </ul>
+            </div>
+          </div>
+      </div>
+      <div class="container content bb">
+          
+          <div class="container content-boxes">
+
+            <div class="picboxes">
+                <img src="kittens1.jpg" alt="CEO">
+
+                <p class="boxtitle">CEO</p>
+
+            </div>
+
+            <div class="picboxes">
+                <img src="kittens3.jpg" alt="CTO">
+
+                <p class="boxtitle">CTO</p>
+
+            </div>
+
+          </div>
+
+      </div>
+
+      <div class="container footer">
+          <p class="boxtitle">Footer</p>
+      </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
