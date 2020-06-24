@@ -25,7 +25,7 @@ function tipAmount(bill, service) {
     }
 }
 
-console.log(tipAmount(100, 'good'));
+console.log(tipAmount(105.28, 'good'));
 console.log(tipAmount(40, 'fair'));
 
 console.log("\nTip Calculator 2", "\n");
@@ -118,7 +118,7 @@ function leetSpeak(text) {
                 splitText[index] = '4'
                 break;
             case "e":
-                splitText[index] = '3'
+                splitText[index] = '3' 
                 break;
             case "g":
                 splitText[index] = '6'
