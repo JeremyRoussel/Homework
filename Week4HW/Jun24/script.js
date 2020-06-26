@@ -69,6 +69,7 @@ blog.setAttribute('class', 'd-flex flex-column align-items-start mb-4')
 
 var title1 = document.createElement('div')
 title1.setAttribute('class', 'text-color-blue')
+title1.setAttribute('style', 'color: blue; font-size: x-large;')
 title1.innerText = "Hello WatchKit"
 
 var body1 = document.createElement('div')
@@ -77,6 +78,7 @@ body1.innerText = "Last month Apple released the anticipated WatchKit Framework 
 
 var baseline = document.createElement('div')
 baseline.setAttribute('class', 'orange d-flex flex-row w-100')
+baseline.setAttribute('style', 'background-color: orange')
 baseline.setAttribute('width', '100%')
 
 var comments1 = document.createElement('div')
@@ -104,6 +106,7 @@ blog2.setAttribute('class', 'd-flex flex-column align-items-start mb-4')
 
 var title2 = document.createElement('div')
 title2.setAttribute('class', 'text-color-blue')
+title2.setAttribute('style', 'color: blue; font-size: x-large;')
 title2.innerText = "Hello WatchKit"
 
 var body2 = document.createElement('div')
@@ -112,6 +115,7 @@ body2.innerText = "Last month Apple released the anticipated WatchKit Framework 
 
 var baseline2 = document.createElement('div')
 baseline2.setAttribute('class', 'orange d-flex flex-row w-100')
+baseline2.setAttribute('style', 'background-color: orange')
 baseline2.setAttribute('width', '100%')
 
 var comments2 = document.createElement('div')
