@@ -97,7 +97,6 @@ call3Times(helloWorld)
 function callNTimes(num, fun){
     for (let i = 0; i < num; i++) {
         fun()
-        
     }
 }
 
@@ -116,6 +115,7 @@ console.log("\n Sum an Array\n");
 console.log(sumNumList);
 
 // Acronym?? Not if I have anything to say about it
+// THIS IS AN INITIALISM
 
 function initial(string){
     arr = string.split("")
@@ -182,7 +182,6 @@ console.log(arr2);
 // Ceasar Cipher
 
 var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-var key2 = 'WXYZABCDEFGHIJKLMNOPQRSTUV'.split('')
 
 function createCipher(num){
     var slice1 = alpha.slice(26-num%26)
