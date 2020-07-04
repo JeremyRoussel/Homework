@@ -60,38 +60,41 @@
           h6List.forEach(el => {
             let urls = el.innerText  // InnerText
             let urlsList = urls.split(',')  // Transform to Array
-            console.log(urlsList)  // Log Array format
+            // console.log(urlsList)  // Log Array format
             
             let url = urlsList
             let array = new Array;
             var fetches = [];
+            el.innerText = ""
             for (let i = 0; i < url.length; i++) {
-              console.log(url[i]);
+              let anchor = document.createElement('a')
+              anchor.href = url[i]
+              el.appendChild(anchor)
+              // console.log(url[i]);
               fetches.push(
                 fetch(url[i])
                 .then(res => res.json())
                 .then(json => {
                       
                       array.push(json.name);
-                      console.log(json.name);
+                      // console.log(json.name);
                     }
                 )
                 .catch(status, err => {return console.log(status, err);})
               );
             }
             Promise.all(fetches).then(function() {
-              console.log(array);
+              // console.log(array);
+              let anchors = el.querySelectorAll('a')
+              // console.log(anchors);
+              for (let y = 0; y < anchors.length; y++) {
+                anchors[y].innerHTML = array[y] + '<br>'
+                
+              }
               
-              
-              
+              // anchors.forEach(el, index => el.innerText = array[index])
 
             });
-  
-            
-
-
-
-
 
           });
         }
