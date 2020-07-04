@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Game of Thrones</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+  </head>
+  <body>
+
+      <div class="container-fluid">
+          <div class="row" id="rowPlacement">
+            
+
+           
+
+          </div><!--end of row-->
+      </div>
+      
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
+    <!-- Optional JavaScript -->
+    <script src='js/cardLayout.js'>
+      //Include cardLayout function
+    </script>
+
+     <script>
+        var topLevel = document.getElementById('rowPlacement')
+        
+        const fetchString = 'https://anapioficeandfire.com/api/characters?page=1&pageSize=50'
+
+        async function fetchCharacters(fetchString) {
+          const res = await fetch(fetchString);
+          const data = await res.json();
+          // console.log(data);  // Data will be logged only after retrieved
+          data.forEach(el => {
+            if (el.name != "" & el.allegiances != "") {
+              let card = makeCard(el)
+              topLevel.appendChild(card)
+            }
+          });
+          var h6List = document.querySelectorAll('h6')
+          // console.log(h6List);  // List of h6 Elements
+          h6List.forEach(el => {
+            let urls = el.innerText  // InnerText
+            let urlsList = urls.split(',')  // Transform to Array
+            console.log(urlsList)  // Log Array format
+            
+            let url = urlsList
+            let array = new Array;
+            var fetches = [];
+            for (let i = 0; i < url.length; i++) {
+              console.log(url[i]);
+              fetches.push(
+                fetch(url[i])
+                .then(res => res.json())
+                .then(json => {
+                      
+                      array.push(json.name);
+                      console.log(json.name);
+                    }
+                )
+                .catch(status, err => {return console.log(status, err);})
+              );
+            }
+            Promise.all(fetches).then(function() {
+              console.log(array);
+              
+              
+              
+
+            });
+  
+            
+
+
+
+
+
+          });
+        }
+
+        fetchCharacters(fetchString);
+
+    </script>
+
+  </body>
+</html>

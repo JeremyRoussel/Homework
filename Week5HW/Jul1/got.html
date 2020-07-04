@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Game of Thrones</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+  </head>
+  <body>
+
+      <div class="container-fluid">
+          <div class="row" id="rowPlacement">
+            
+
+           
+
+          </div><!--end of row-->
+      </div>
+      
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    
+    <!-- Optional JavaScript -->
+    <script src='js/cardLayout.js'>
+      //Include cardLayout function
+    </script>
+
+     <script>
+        var topLevel = document.getElementById('rowPlacement')
+        
+        const fetchString = 'https://anapioficeandfire.com/api/characters?page=1&pageSize=50'
+
+        function cardData(fetchString) {
+          return new Promise(() => {
+            fetch(fetchString)
+              .then(data => data.json())
+              .then(json => {
+                json.forEach(el => {
+                  if (el.name != "" && el.allegiances != ""){
+                    var card = makeCard(el)
+                    topLevel.appendChild(card)
+                  }
+
+                });
+              })
+              .catch(err => console.error(err))
+          })
+        }
+
+        const data = async function(x) {
+          let a = await cardData(fetchString)
+          let b = await anchors('test2')
+          console.log(b);
+          console.log('here');
+          return a, b
+        }
+
+        const anchors = async function getURLS(y) {
+          setTimeout(() => {
+            var h6List = document.querySelectorAll('h6')
+            // console.log('hello2')
+            // console.log(h6List[8])
+            // console.log(h6List.length);
+            let URLsList = []
+            for (let i = 0; i < h6List.length; i++) {
+              let urlText = h6List[i].innerText
+              let urlList = urlText.split(',')
+
+              console.log(urlList)
+              
+              
+              var names = Promise.allSettled(urlList.map(url => {
+                fetch(url)
+                  .then(resp =>resp.json())
+                  .then(data => data.name)
+              }))
+                .then(name => console.log(name))
+            
+            }
+
+            return names
+
+          
+          }, 100)
+          
+        }
+
+        var a, b = data('test')
+        var resp2 = anchors('test2')
+        console.log(a, b);
+
+        var nameAttempt = ['https://anapioficeandfire.com/api/houses/362']
+
+        var nameLookup = async function namecall(nameString) {
+          let name = Promise.allSettled(nameAttempt.map(url => {
+                fetch(url)
+                  .then(resp => resp.json())
+                  .then(data => {
+                    console.log(data.name);
+                    return data.name})
+              }))
+              .then(results => results.forEach((result) => console.log(result.status)))
+              
+        }
+
+
+        console.log(nameLookup(nameAttempt));
+
+
+
+    </script>
+
+  </body>
+</html>
